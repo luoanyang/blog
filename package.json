@@ -7,7 +7,7 @@
   },
   "scripts": {
     "deploy": "hexo g && rm -rf ./blog; mv ./public ./blog; scp -r ./blog/ ssh luoanyang-server:/home/html/web/",
-    "gitHub": "git add .;git commit -m'update';git push "
+    "github": "git add .;git commit -m'update';git push "
   },
   "dependencies": {
     "hexo": "^3.9.0",

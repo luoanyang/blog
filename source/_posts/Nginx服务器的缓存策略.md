@@ -7,7 +7,7 @@ categories: 后端
 
 Nginx使用**Expires**、**Last-Modified**、**ETag**，这样可利用客户端（例如浏览器）的缓存，减少http请求，提高页面响应速度。
 
-## 1.Expires
+## Expires
 HTTP头信息Expires（过期时间） 属性是HTTP控制缓存的基本手段，这个属性告诉缓存器：相关副本在多长时间内是新鲜的。过了这个时间，缓存器就会向源服务器发送请求，检查文档是否被修 改。几乎所有的缓存服务器都支持Expires（过期时间）属性
 
 ### Nginx中设置
@@ -19,7 +19,7 @@ http {
 }
 ```
 
-## 2.ETag/If-None-Match
+## ETag/If-None-Match
 ### 什么是Etag
 当发送一个服务器请求时，浏览器首先会进行缓存过期判断。浏览器根据缓存过期时间判断缓存文件是否过期。
 
@@ -48,7 +48,7 @@ Etag由服务器端生成，客户端通过If-None-Match这个条件判断请求
 流程很简单，问题是，如果服务器又设置了Cache-Control:max-age和Expires呢，怎么办？
 答案是同时使用，也就是说在完全匹配If-Modified-Since和If-None-Match即检查完修改时间和Etag之后，服务器才能返回304.(不要陷入到底使用谁的问题怪圈)
 
-## 3.Last-Modified/If-Modified-Since
+## Last-Modified/If-Modified-Since
 Last-Modified在Nginx中也是默认开启的
 
 ### Nginx中设置

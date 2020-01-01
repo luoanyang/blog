@@ -4,7 +4,7 @@
 
 # Site
 title: 摘白菜的萝卜
-subtitle: 摘白菜的萝卜的博客
+subtitle: 记录自己所感所悟
 description: 天道酬勤
 keywords: Web前端,摘白菜的萝卜的博客
 author: luoanyang
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: indigo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

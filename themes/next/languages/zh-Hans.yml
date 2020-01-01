@@ -46,7 +46,7 @@ page:
   tags: 标签
 
 footer:
-  powered: "黔ICP备19000057号"
+  powered: "<a href='http://www.beian.miit.gov.cn' target='_bank'>黔ICP备19000057号</a>"
   theme: 主题
 
 counter:
@@ -89,10 +89,10 @@ symbol:
   period: '。 '
   colon: '：'
 
-reward:
-  donate: 打赏
-  wechatpay: 微信支付
-  alipay: 支付宝
-  bitcoin: 比特币
+# reward:
+#   donate: 打赏
+#   wechatpay: 微信支付
+#   alipay: 支付宝
+#   bitcoin: 比特币
 
 gitmentbutton: 显示 Gitment 评论

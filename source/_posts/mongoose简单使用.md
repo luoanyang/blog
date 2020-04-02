@@ -98,4 +98,4 @@ studentModel.deleteData({"name":"xiaoming"},function(err){
 ```
 
 ## 个人总结
-** 简单的使用mongoose，感觉结构化比较清晰。 **
+**简单的使用mongoose，感觉结构化比较清晰。**

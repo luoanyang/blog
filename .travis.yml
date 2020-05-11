@@ -1,0 +1,23 @@
+language: node_js
+
+services:
+  - mysql
+
+node_js:
+  - 10.15.3
+
+addons:
+
+before_install:
+  - ls -a
+
+install:
+  - npm install
+
+before_script:
+  - ls -a
+
+script:
+  - npm run test
+
+after_success:

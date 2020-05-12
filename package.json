@@ -7,8 +7,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "hexo g && mv public blog",
-    "start": "hexo server"
+    "build": "hexo g",
+    "postbuild": "mv public blog",
+    "start": "hexo server",
+    "deploy": "scp -r ./blog/ ssh root@118.25.141.183:/data/"
   },
   "dependencies": {
     "hexo": "^3.9.0",

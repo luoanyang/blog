@@ -22,6 +22,7 @@ before_install:
 
 install:
   - npm install
+  - ls -a ~/.ssh/
 
 before_script:
   - ls -a
@@ -30,5 +31,5 @@ script:
   - npm run build
 
 after_success:
-  -mv public blog && scp ./blog/ ssh root@118.25.141.183:/
+  -mv public blog && scp -r ./blog/ ssh root@118.25.141.183:/
 

@@ -30,5 +30,5 @@ script:
   - npm run build
 
 after_success:
-  -mv public blog && scp ./blog/ ssh root@118.25.141.183 /
+  -mv public blog && scp ./blog/ ssh root@118.25.141.183:/
 

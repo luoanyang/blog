@@ -24,5 +24,5 @@ script:
   - npm run build
 
 after_success:
-  - ssh root@118.25.141.183
+  - ssh root@118.25.141.183 
 

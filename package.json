@@ -9,8 +9,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "hexo g && mv public blog",
     "start": "hexo server",
-    "deploy": "hexo g && rm -rf ./blog; mv ./public ./blog; scp -r ./blog/ ssh luoanyang-server:/home/html/web/",
-    "github": "git add .;git commit -m'update';git push "
   },
   "dependencies": {
     "hexo": "^3.9.0",

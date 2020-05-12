@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "hexo g && mv public blog",
-    "start": "hexo server",
+    "start": "hexo server"
   },
   "dependencies": {
     "hexo": "^3.9.0",

@@ -6,7 +6,13 @@ node_js:
 addons:
 
 before_install:
-  - ls -a
+  - openssl aes-256-cbc -K $encrypted_f5e7c16a6e2b_key -iv $encrypted_f5e7c16a6e2b_iv -in .travis/luos.enc -out ~/.ssh/luos -d
+  # 开启 ssh-agent，即允许使用 ssh 命令
+  - eval "$(ssh-agent -s)"
+ # 给予 luos 文件权限，避免警告
+  - chmod 600 ~/.ssh/luos
+  # 将私钥添加到 ssh
+  - ssh-add ~/.ssh/luos
 
 install:
   - npm install
@@ -15,5 +21,8 @@ before_script:
   - ls -a
 
 script:
+  - npm run build
 
 after_success:
+  - ssh root@118.25.141.183
+

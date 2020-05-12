@@ -3,7 +3,13 @@ language: node_js
 node_js:
   - 10.15.3
 
+# 这里填写服务器的ip，若端口号不是22，后面要注明端口号
 addons:
+  ssh_known_hosts:
+    - 118.25.141.183
+cache:
+  directories:
+    - node_modules
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_f5e7c16a6e2b_key -iv $encrypted_f5e7c16a6e2b_iv -in .travis/luos.enc -out ~/.ssh/luos -d
@@ -24,5 +30,5 @@ script:
   - npm run build
 
 after_success:
-  - ssh root@118.25.141.183 
+  -mv public blog && scp ./blog/ ssh root@118.25.141.183 /
 
